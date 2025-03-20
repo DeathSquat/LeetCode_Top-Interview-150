@@ -13,7 +13,7 @@ class Solution(object):
 
         for course, prereq in prerequisites:
             graph[prereq].append(course)
-            in_degree[course] += 1  # Increase in-degree of the dependent course
+            in_degree[course] += 1  # Increase in-degree of dependent course
 
         # Step 2: Add all courses with in-degree 0 to the queue (no prerequisites)
         queue = deque([i for i in range(numCourses) if in_degree[i] == 0])
